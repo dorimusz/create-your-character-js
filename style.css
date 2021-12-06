@@ -1,42 +1,197 @@
 * {
-    margin: 0;
-    padding: 0;
-    /* border: 0;
+  margin: 0;
+  padding: 0;
+  /* border: 0;
     outline: none; */
-    box-sizing: border-box;
-  
-    background: transparent;
-  
-    font-family: inherit;
-    
-    text-decoration: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: transparent;
+  font-family: inherit;
+  text-decoration: none;
+}
+
+ol, ul, li {
+  list-style: none;
+  display: block;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a img {
+  border: none;
+}
+
+button, a {
+  cursor: pointer;
+  color: inherit;
+}
+
+textarea {
+  resize: none;
+}
+
+button, input, textarea, select {
+  -moz-appearance: none !important;
+       appearance: none !important;
+  -webkit-appearance: none !important;
+  border-radius: 0;
+}
+
+body {
+  font-family: 'Heebo', sans-serif;
+  width: 100%;
+  background-color: #f9f5f0;
+}
+
+body div#root {
+  width: 90%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border: solid 1px #5e503f;
+  border-radius: 10px;
+  -webkit-box-shadow: 7px 7px 10px #a9927d;
+          box-shadow: 7px 7px 10px #a9927d;
+  background-color: #fff;
+}
+
+body .title h1 {
+  text-align: center;
+  padding: 10px;
+  font-size: 22px;
+}
+
+body .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding: 20px 10px;
+}
+
+body .container #form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 60%;
+  border: 1px solid #000;
+  border-radius: 7px;
+}
+
+body .container #form div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 10px 20px;
+}
+
+body .container #form label {
+  padding-bottom: 5px;
+}
+
+body .container #form input, body .container #form select {
+  line-height: 20px;
+}
+
+body .container .characterSheet {
+  width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .container .characterSheet .characterBox {
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid #000;
+  border-radius: 7px;
+}
+
+body .container .characterSheet #selectValueGenderImg img, body .container .characterSheet #selectValueClassImg img {
+  height: 60px;
+}
+
+body .container .characterSheet #selectValueRaceImg img {
+  height: 190px;
+}
+
+body .container .characterSheet #selectValueGenderImg, body .container .characterSheet #selectValueClassImg, body .container .characterSheet #selectValueRaceImg, body .container .characterSheet #inputValueFirst, body .container .characterSheet #inputValueLast {
+  font-weight: 700;
+  color: #fff;
+}
+
+body .container .characterSheet div.gender, body .container .characterSheet div.class {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100px;
+}
+
+body .container .characterSheet div.race {
+  height: 220px;
+}
+
+body .container .characterSheet div.class {
+  margin-bottom: 10px;
+}
+
+body .container .characterSheet div.characterBox div {
+  padding: 10px;
+}
+
+@media screen and (max-width: 1000px) {
+  .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
-  
-  ol, ul, li {
-    list-style:none;
-    display:block;
+  .container #form {
+    width: 100%;
   }
-  
-  table {
-    border-collapse:collapse;
-    border-spacing:0
+  .container .characterSheet {
+    width: 100%;
   }
-  
-  a img {
-    border: none
-  }
-  
-  button, a {
-    cursor: pointer;
-    color: inherit
-  }
-  
-  textarea {
-    resize: none
-  }
-  
-  button, input, textarea, select {
-    appearance: none !important;
-    -webkit-appearance: none !important;
-    border-radius: 0
-  }
+}
+/*# sourceMappingURL=style.css.map */

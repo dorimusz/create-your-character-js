@@ -1,5 +1,5 @@
 const formTitle = `
-    <div>
+    <div class="title">
         <h1>Fill out the form to set up your character</h1>
     </div>
 `
@@ -55,16 +55,19 @@ const formElement = (nfs, id) => {
 
     return `
         <form id="${id}">
-            ${setForm}
+            <div class="formBox>
+                ${setForm}
 
-            ${selectElement("select", "gender", "Choose your gender from the dropdown menu:", ["none", "Male", "Female", "Non-binary"])}
-            ${selectElement("select", "race", "Choose your race from the dropdown menu:", ["none", "Tabaxi", "Kenku", "Reborn", "Shifter", "Harengon", "Hexblood", "Elf"])}
-            ${selectElement("select", "class", "Choose your character's class from the drop down menu below. Be aware, that it has an impact on your starting point:", ["none", "Noble", "Servant", "Citizen", "Nomad"])}
-            
-            <button>Create my avatar</button>
+                ${selectElement("select", "gender", "Choose your gender from the dropdown menu:", ["none", "Male", "Female", "Non-binary"])}
+                ${selectElement("select", "race", "Choose your race from the dropdown menu:", ["none", "Tabaxi", "Kenku", "Reborn", "Shifter", "Harengon", "Hexblood", "Elf"])}
+                ${selectElement("select", "class", "Choose your character's class from the drop down menu below. Be aware, that it has an impact on your starting point:", ["none", "Noble", "Servant", "Citizen", "Nomad"])}
+                
+                
+            </div>
         </form>
+        
     `
-
+//<button>Create my avatar</button>
 }
 
 const formSubmit = (event) => {
@@ -147,33 +150,44 @@ function loadEvent() {
     //console.log(e);
     const root = document.getElementById("root");
     root.insertAdjacentHTML("beforeend", formTitle);
+
+    root.insertAdjacentHTML("beforeend", `<div class="container"></div>`);
+    const container = document.querySelector(".container");
+   
+
     root.insertAdjacentHTML("beforeend", formElement(nameFields, "form"));
     root.insertAdjacentHTML("beforeend", `
         <div class="characterSheet">
-            <div class="firstName">
-                Your character's first name: <span id="inputValueFirst"></span>
-            </div> 
+            <div class="characterBox">
+                <div class="firstName">
+                    Your character's first name: <span id="inputValueFirst"></span>
+                </div> 
 
-            <div class="lastName">
-                Your character's last name: <span id="inputValueLast"></span>
-            </div> 
+                <div class="lastName">
+                    Your character's last name: <span id="inputValueLast"></span>
+                </div> 
 
-            <div class="gender">
-                Your character's gender: <span id="selectValueGender"></span><span id="selectValueGenderImg"></span>
-            </div>
+                <div class="gender">
+                    Your character's gender: <div id="selectValueGenderImg"></div>
+                </div>
 
-            <div class="race">
-                Your character's race: <div id="selectValueRaceImg"></div>
-            </div>
+                <div class="race">
+                    Your character's race: <div id="selectValueRaceImg"></div>
+                </div>
 
-            <div class="class">
-                Your character's class: <div id="selectValueClassImg"></div>
+                <div class="class">
+                    Your character's class: <div id="selectValueClassImg"></div>
+                </div>
             </div>
         </div> 
     `);
 
     const form = document.getElementById("form");
     form.addEventListener("submit", formSubmit);
+
+    container.appendChild(form);
+    const characterSheet = document.querySelector(".characterSheet");
+    container.appendChild(characterSheet);
 
     const inputList = form.querySelectorAll("input");
     for (const input of inputList) {
@@ -188,6 +202,22 @@ function loadEvent() {
 
     const selectClass = document.querySelector('.class');
     selectClass.addEventListener('change', selectClassOption);
+
+    
+
+    /*
+    
+    
+    let container = document.createElement("div");
+    container.classList.add("container");
+    document.container.appendChild(formSheet);
+    */
+
+
+
+
+    // container = document.querySelector('.container');
+
 }
 
 window.addEventListener("load", loadEvent);

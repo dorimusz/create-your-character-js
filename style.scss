@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+    /* border: 0;
+    outline: none; */
+    box-sizing: border-box;
+  
+    background: transparent;
+  
+    font-family: inherit;
+    
+    text-decoration: none;
+  }
+  
+  ol, ul, li {
+    list-style:none;
+    display:block;
+  }
+  
+  table {
+    border-collapse:collapse;
+    border-spacing:0
+  }
+  
+  a img {
+    border: none
+  }
+  
+  button, a {
+    cursor: pointer;
+    color: inherit
+  }
+  
+  textarea {
+    resize: none
+  }
+  
+  button, input, textarea, select {
+    appearance: none !important;
+    -webkit-appearance: none !important;
+    border-radius: 0
+  }
+
+  body {
+    font-family: 'Heebo', sans-serif;
+    width: 100%;
+    background-color: #f9f5f0;
+
+      div#root {
+        width: 90%;    
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border: solid 1px #5e503f;
+        border-radius: 10px;
+        box-shadow: 7px 7px 10px #a9927d;
+        background-color: #fff;
+        
+      }
+
+      .title {
+
+        h1 {
+          text-align: center;
+          padding: 10px;
+          font-size: 22px;
+        }
+      }
+
+      .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        padding: 20px 10px;
+
+        #form {
+
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+
+          width: 60%;
+
+          border: 1px solid #000;
+          border-radius: 7px;
+
+          div {
+            display: flex;
+            flex-direction: column;
+            padding: 10px 20px; 
+          }
+
+          label {
+            padding-bottom: 5px;
+          }
+
+          input, select {
+            line-height: 20px;
+          }
+      }
+
+      .characterSheet {
+        width: 40%;
+        display: flex;
+        justify-content: center;
+
+        .characterBox {
+          width: 90%;
+
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          
+          border: 1px solid #000;
+          border-radius: 7px;
+        }
+      
+
+        #selectValueGenderImg img, #selectValueClassImg img {
+          height: 60px;
+        }
+
+        #selectValueRaceImg img {
+          height: 190px;
+        }
+
+        #selectValueGenderImg, #selectValueClassImg, #selectValueRaceImg, #inputValueFirst, #inputValueLast {
+          font-weight: 700;
+          color: #fff
+        }
+
+
+        div.gender, div.class {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          height: 100px;
+        }
+
+        div.race {
+          height: 220px;
+        }
+
+        div.class {
+          margin-bottom: 10px;
+        }
+
+        div.characterBox div {
+          padding: 10px;
+        }
+      }
+
+
+      }
+  }
+
+
+@media screen and (max-width: 1000px) {
+    .container {
+        flex-direction: column;
+
+        #form {
+          width: 100%;
+      }
+  
+      .characterSheet {
+          width: 100%;
+      }
+    }
+   
+}
