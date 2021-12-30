@@ -151,7 +151,7 @@ body .container .characterSheet #selectValueRaceImg img {
 
 body .container .characterSheet #selectValueGenderImg, body .container .characterSheet #selectValueClassImg, body .container .characterSheet #selectValueRaceImg, body .container .characterSheet #inputValueFirst, body .container .characterSheet #inputValueLast {
   font-weight: 700;
-  color: #fff;
+  color: #000;
 }
 
 body .container .characterSheet div.gender, body .container .characterSheet div.class {
